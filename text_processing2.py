@@ -28,7 +28,7 @@ def to_camel_case(underscore_str):
     res=[ele for ele in res if ele!='']
     camelcase_str=''
     if res:
-        if res[0].islower():
+        if res[0][0].islower():
             camelcase_str+=res[0]
         else:
             camelcase_str+=res[0].lower()
