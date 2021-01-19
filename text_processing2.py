@@ -24,17 +24,13 @@ def digits_to_words(input_string):
     return digit_string
 
 
-def is_already_camel(x):
-    return x[0].islower()
-
-
 def to_camel_case(underscore_str):
     print(underscore_str)
     res=re.split('[_?]',underscore_str)
     res=[ele for ele in res if ele!='']
     camelcase_str=''
     if res:
-        if is_already_camel(res[0]):
+        if res[0].islower():
             camelcase_str+=res[0]
         else:
             camelcase_str+=res[0].lower()
