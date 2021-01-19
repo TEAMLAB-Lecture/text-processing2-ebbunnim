@@ -21,11 +21,9 @@ def digits_to_words(input_string):
         if s.isdigit():
             digit_string+=num_dict[s]
             digit_string+=' '
-    return digit_string
-
+    return digit_string[:-1]
 
 def to_camel_case(underscore_str):
-    print(underscore_str)
     res=re.split('[_?]',underscore_str)
     res=[ele for ele in res if ele!='']
     camelcase_str=''
